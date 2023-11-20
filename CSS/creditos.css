@@ -1,0 +1,75 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+.creditos {
+    font-family: "letras";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 400px;
+    margin-left: -200px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ff0000;
+    animation-name: credits;
+    animation-duration: 20s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+.titulos {
+    font-family: "letras";
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px rgb(0, 0, 0);
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+
+.progs{
+    font-family: "letras";
+    color: #DCC48E;;
+    text-shadow: 3px 3px rgb(0, 0, 0);
+    margin-bottom: 5px;
+    font-size: 19px;
+}
+
+.nombres{
+    font-family: "letras";
+    color: #DCC48E; 
+    text-shadow: 3px 3px rgb(0, 0, 0);
+    margin-bottom: 50px;
+    font-size: 25px;
+}
+
+.Escudo,p{
+    margin: auto;
+    color: #DCC48E;
+}
+
+
+
+
+
+
+@keyframes credits {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -198%;
+    }
+}
+
+@font-face {
+    font-family: "letras";
+    src: url(letras.ttf);
+}
+

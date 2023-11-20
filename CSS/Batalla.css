@@ -1,0 +1,522 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#pantalla{
+    overflow: hidden; /* aqui utilizo la propiedad overflow "hidden" para limitar el tamaño de la pantalla*/
+}
+:root {
+    --clr-burlywood: rgb(130, 153, 177);
+    --clr-papayawhip: rgb(81, 104, 128);
+    --clr-brown: rgb(57, 60, 71);
+    --crl-black: #000;
+}
+
+body {
+    background-color: var(--crl-black);
+}
+@keyframes vista_U{
+    0%{
+        transform: scale(120%);
+        transform: translateX(100%);
+    }
+    100%{
+        transform: scale(100%);
+        transform: translateX(120%);
+    }
+    
+}
+@keyframes vista_E{
+    0%{
+        opacity: 100%;
+        position: absolute;
+    }
+    100%{
+        opacity: 0%;
+        position: relative;
+    }
+    
+}
+main {
+    max-height: 95vh;
+    max-width: 180vw;
+    background-color: var(--clr-papayawhip); 
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden; /* aqui utilizo la propiedad overflow "hidden" para recortar contenido que se salga de la misma*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+#carta_apertura{
+    height: 95vh;
+    max-width: 180vw;
+    background-color: var(--crl-black);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    margin-top: -95vh;
+}
+@keyframes Sta{
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-400%);
+        visibility: hidden; 
+    } 
+}
+@keyframes En{
+    0%{
+        transform: translatex(400%);
+        visibility: visible; 
+    }
+    25%{
+        transform: translatex(0%);
+    }
+    50%{
+        transform: translatex(0%);
+    }
+    75%{
+        transform: translatex(0%);
+    }
+    100%{
+        transform: translatex(-400%);
+        visibility: hidden; 
+    } 
+}
+#cosas{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: top;
+    animation-name: Zoom;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#iconos{
+    flex-direction: row;
+}
+#marcador {
+    background-color: var(--clr-burlywood);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--clr-brown);
+    font-weight: 600;
+    text-align: center;
+}
+#Boton_configuraciones{
+    flex-direction: row;
+    background-color: var(--clr-brown);
+    border-radius: 10px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 1.7rem 2rem;
+    border-radius: 1rem;
+}
+#pantalla_configuraciones{
+    height: 95vh;
+    max-width: 180vw;
+    background-color: var(--crl-black);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    margin-top: -95vh;
+    visibility: hidden; 
+}
+#recuadro_configuraciones{
+    height: 40%;
+    width: 40%;
+    background-color: var(--clr-burlywood);
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-brown);
+    border: 60px solid;
+    border-image: url(./../IMG/border.png) 33% repeat;
+}
+#boton_salir_configuraciones{
+    position: relative;
+    height: 30%;
+    width: 15%;
+    background-color: var(--clr-brown);
+    border-radius: 10px;
+}
+#boton_daltonismo{
+    position: relative;
+    height: 30%;
+    width: 15%;
+    background-color: var(--clr-brown);
+    border-radius: 10px;
+}
+#boton_reproductor{
+    position: relative;
+    height: 30%;
+    width: 15%;
+    background-color: var(--clr-brown);
+    border-radius: 10px;
+}
+.fondo{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+.piso{
+    width: 100vw;
+    height: 30vh;
+    background-color: var(--clr-brown);
+    border-radius: 10px;
+    animation-name: Zoom;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+#armas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 100vh;
+}
+.arma {
+    height: 270px;
+    width: 180px;
+    transition: box-shadow .1s, transform;
+    background-image: center ;
+    margin: 5px;
+}
+.arma:hover{
+    box-shadow: 0px 50px 50px rgba(0, 0, 0, 1);
+    animation-name: card_up;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.animate {
+    animation-name: example;
+    animation-delay: 0,5s;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes Zoom{
+    0%{
+        transform: scale(120%);
+    }
+    100%{
+        transform: scale(100%);
+    } 
+}
+@keyframes Pro_win{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    } 
+}
+@keyframes card_up{
+    0%{
+        transform: translateY(0%) scale(100%);
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    100%{
+        transform: translateY(-50%) scale(110%);
+        margin-left: 20px;
+        margin-right: 20px;
+    } 
+}
+@keyframes example{
+    0%{
+        transform: translateY(0%) scale(100%);
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    100%{
+        transform: translateY(500%) scale(110%);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+#pantalla_perder{
+    height: 95vh;
+    max-width: 180vw;
+    background-color: var(--crl-black);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    margin-top: -95vh;
+    visibility: hidden; 
+}
+#recuadro_perder{
+    height: 40%;
+    width: 40%;
+    background-color: var(--clr-burlywood);
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-brown);
+    border: 60px solid;
+    border-image: url(./../IMG/border.png) 33% repeat;
+}
+#boton_perder{
+    height: 30%;
+    width: 35%;
+    background-color: var(--clr-brown);
+    color: var(--crl-black);
+}
+@keyframes perder{
+    0%{
+        opacity: 0%;
+        position: relative;
+    }
+    100%{
+        opacity: 100%;
+        position: absolute;
+    }
+}
+@keyframes Rperder{
+    0%{
+        opacity: 100%;
+        position: absolute;
+    }
+    100%{
+        opacity: 0%;
+        position: relative;
+    }
+    
+}
+#marcador_oleadas {
+    background-color: var(--clr-burlywood);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--clr-brown);
+    font-weight: 600;
+    justify-content: center;
+}
+#capa_personajes{
+    height: 95vh;
+    width: 100vw;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: -95vh;
+    visibility: hidden;
+    animation-name: Zoom;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#Usu_recuadro {
+    background-color: var(--clr-burlywood);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--clr-brown);
+    font-weight: 600;
+    text-align: center;
+}
+#mensaje{
+    visibility: hidden;
+}
+#Prota{
+    position: relative;
+    height: 300px;
+    width: 200px;
+    right: 45vh;
+    visibility: visible;
+    background-image: url(./../IMG/Pepe_idle.png);
+    background-size: cover;
+    animation: idle 1.3s infinite steps(2, start); /* utilizo el steps para poder especificar los pasos o keyframes de una animacion */
+}
+#enemigo{
+    position: relative;
+    height: 300px;
+    width: 200px;
+    background-image: url(./../IMG/spritesheet_knight.png);
+    left: 45vh;
+    visibility: visible;
+    background-image: url(./../IMG/Pepe_idle.png);
+    background-size: cover;
+    animation: idle 1.3s infinite steps(2, start);
+    filter: sepia(50%);
+    transform: scaleX(-1); /* utilizo el scale(-1) para voltear o reflejar al enemigo */
+}
+@keyframes idle{
+    10%{
+        background-position: 0px 0px; /* con cada background-position especifico que parte del sprite sheet quiero utilizar en capa parte de la animacion */
+    }
+    20%{
+        background-position: 0px 0px;
+    }
+    30%{
+        background-position: 0px 0px;
+    }
+    40%{
+        background-position: 0px 0px;
+    }
+    50%{
+        background-position: 1510px 0px;
+    }
+    60%{
+        background-position: 3020px 0px;
+    }
+    70%{
+        background-position: 3020px 0px;
+    }
+    80%{
+        background-position: 3020px 0px;
+    }
+    90%{
+        background-position: 3020px 0px;
+    }
+    100%{
+        background-position: 4530px 0px;
+    }
+}
+
+@keyframes waiting{
+    0%{
+        background-image: url(./../IMG/Pepe_prepare.png);
+        background-position: 0px 0px;
+    }
+    10%{
+        background-image: url(./../IMG/Pepe_prepare.png);
+        background-position: 0px 0px;
+    }
+    100%{
+        background-image: url(./../IMG/Pepe_prepare.png);
+        background-position: 1510px 0px;
+    }
+}
+/* aca estan las animacionjes de victoria, derrota y empate de ambos personajes */
+@keyframes win{
+    0%{
+        background-image: url(./../IMG/Pepe_attack.png);
+        background-position: 0px 0px;
+        width: 250px;
+    }
+    10%{
+        background-image: url(./../IMG/Pepe_attack.png);
+        background-position: 0px 0px;
+        width: 250px;
+    }
+    25%{
+        background-image: url(./../IMG/Pepe_attack.png);
+        background-position: 0px 0px;
+        width: 250px;
+    }
+    100%{
+        background-image: url(./../IMG/Pepe_attack.png);
+        background-position: 1510px 0px;
+        width: 250px;
+    }
+}
+@keyframes emp{
+    0%{
+        background-image: url(./../IMG/Pepe_uff.png);
+        background-position: 0px 0px;
+    }
+    10%{
+        background-image: url(./../IMG/Pepe_uff.png);
+        background-position: 0px 0px;
+    }
+    25%{
+        background-image: url(./../IMG/Pepe_uff.png);
+        background-position: 0px 0px;
+    }
+    100%{
+        background-image: url(./../IMG/Pepe_uff.png);
+        background-position: 1510px 0px;
+    }
+}
+@keyframes lose{
+    0%{
+        background-image: url(./../IMG/Pepe_uff.png);
+        background-position: 0px 0px;
+    }
+    10%{
+        background-image: url(./../IMG/Pepe_uff.png);
+        background-position: 0px 0px;
+    }
+    25%{
+        background-image: url(./../IMG/Pepe_uff.png);
+        background-position: 0px 0px;
+    }
+    100%{
+        background-image: url(./../IMG/Pepe_uff.png);
+        background-position: 1510px 0px;
+    }
+}
+@keyframes prolose{
+    0%{
+        background-image: url(./../IMG/Pepe_uff.png);
+        background-position: 0px 0px;
+        transform: translatex(0%);
+        opacity: 100%;
+        filter: blur(0px);
+    }
+    100%{
+        background-image: url(./../IMG/Pepe_uff.png);
+        background-position: 1510px 0px;
+        transform: translatex(-100%);
+        opacity: 0%;
+        filter: blur(5px);
+    }
+}
+@keyframes enelose{
+    0%{
+        background-image: url(./../IMG/Pepe_uff.png);
+        background-position: 0px 0px;
+        transform: translatex(0%);
+        opacity: 100%;
+        filter: blur(0px);
+    }
+    100%{
+        background-image: url(./../IMG/Pepe_uff.png);
+        background-position: 1510px 0px;
+        transform: translatex(100%);
+        opacity: 0%;
+        filter: blur(5px);
+    }
+}

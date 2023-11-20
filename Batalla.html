@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, papel o tijera</title>
+    <link rel="stylesheet" href="CSS/Batalla.css">
+</head>
+<body  id="pantalla">
+    <audio id="M_Fondo" autoplay loop>
+        <source src="MUSIC/you_call_that_a_stick.wav" type="audio/wav">
+    </audio>
+    <main>
+        <div class="fondo"><!--dentro de la etiqueta div id "fondo", se almacenan el fondo-->
+            <div id="mensaje"></div>
+            <span id="gana-punto">El primero en llegar a 5 Gana <br>
+            Supera 5 fases para ganar <br>.
+            </span>
+            <p class="piso"></p>
+            </div>        
+        <div id="cosas"> <!--dentro de la etiqueta div id "cosas", se almacenan el marcador de puntos, el boton de apertura de configuracione, y el macador de oleadas-->
+            <div id="iconos">
+            <button id="Boton_configuraciones">⚙</button> <!--con esta etiqueta boton se abre el menu de configuraciones-->
+            <p id="marcador">
+                <span id="puntos-usuario">0</span><!--con el span id "puntos-usuario" se muestran los puntos ganados por el jugador en la ronda-->
+                <span>-</span>
+                <span id="puntos-computadora">0</span><!--con el span id "puntos-computadora" se muestran los puntos ganados por el rival en la ronda-->
+            </p>
+            <div id="marcador_oleadas">
+                <span id="puntos-oleadas">0</span><!--con el span id "puntos-oleadas" se muestran las oleadas ganadas dentro del juego-->
+            </div>
+            </div>
+        </div>
+            <div id="armas"> <!--dentro de la etiqueta div id "armas", se almacenan las distintas cartas-->
+                <button class="arma" id="piedra🪨"><img src="IMG/Piedra.png"></button>
+                <button class="arma" id="papel📋"><img src="IMG/Papel.png"></button>
+                <button class="arma" id="tijera✂"><img src="IMG/Tijeras.png"></button>
+        </div>
+    </main>
+    <div id="capa_personajes"> <!--dentro de la etiqueta div id "capa_personajes", se almacena el jugador y el rival-->
+        <p id="Prota">
+            Prota
+        </p>
+        <p id="enemigo"></p>
+    </div>
+    <div id="carta_apertura"></div> <!--dentro de la etiqueta div id "carta_apertura", se almacena la carta negra que aparece al inicio del juego-->
+    <div id="pantalla_perder"> <!--dentro de la etiqueta div id "pantalla_perder", se almacenan las distinta el recuadro y boton que aparecen al perder-->
+        <div id="recuadro_perder">
+            <p id="boton_perder">Reiniciar</p>
+        </div>
+    </div>
+    <div id="pantalla_configuraciones"><!--dentro de la etiqueta div id "pantalla_configuraciones", se almacena el recuadro de configuraciones y los distintos botones de configuraciones-->
+        <div id="recuadro_configuraciones">
+            <button id="boton_salir_configuraciones">X</button>
+            <button id="boton_daltonismo">👁</button>
+            <button id="boton_reproductor">🔊</button>
+        </div>
+    </div>
+    <script src="JS/Batalla.js"></script>
+</body>
+</html>
